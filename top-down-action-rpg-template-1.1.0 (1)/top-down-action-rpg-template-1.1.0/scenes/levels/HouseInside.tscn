@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://textures/CT-ChorasHouseProto.png" type="Texture" id=1]
 [ext_resource path="res://textures/bgbrown.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/misc/MusicTrack.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/items/Item.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 116.418, 91.1024 )
@@ -80,8 +81,13 @@ required_item = "Doctorado en Vender Diarios"
 required_amount = 1
 reward_item = "Amor Paternal"
 initial_text = "Que haces pibe? Te dije cuando dejaste la facultad que no volvieras a casa si no pensabas recibirte."
-pending_text = "Fuera de mi casa. Estás haciendo llorar a tu madre."
-delivered_text = "Opa! Bien ahí pendejo. Podés volver a dormir bajo nuestro techo."
+pending_text = "Fuera de mi casa. Estas haciendo llorar a tu madre."
+delivered_text = "Opa! Bien ahi pendejo. Podes volver a dormir bajo nuestro techo."
+
+[node name="Item" parent="house_inside" instance=ExtResource( 9 )]
+position = Vector2( -59.828, 47.5185 )
+scale = Vector2( 0.111111, 0.111111 )
+item_type = "Doctorado en Vender Diarios"
 
 [node name="walls" type="StaticBody2D" parent="."]
 
