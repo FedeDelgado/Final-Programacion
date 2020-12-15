@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CT-ChorasHouseProto.png-03b367517634648dd3a29907610e0ae1.stex"
+path="res://.import/bgbrown.png-a503938825a8abe6adc8de58c4cb3807.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/CT-ChorasHouseProto.png"
-dest_files=[ "res://.import/CT-ChorasHouseProto.png-03b367517634648dd3a29907610e0ae1.stex" ]
+source_file="res://textures/bgbrown.png"
+dest_files=[ "res://.import/bgbrown.png-a503938825a8abe6adc8de58c4cb3807.stex" ]
 
 [params]
 
