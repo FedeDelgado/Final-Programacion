@@ -586,6 +586,4 @@ music_track = "res://music/a-2-3-groovy-bgm.ogg"
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
 
-[node name="Paredes" type="StaticBody2D" parent="."]
-
 [editable path="house_inside/Dadbug"]
