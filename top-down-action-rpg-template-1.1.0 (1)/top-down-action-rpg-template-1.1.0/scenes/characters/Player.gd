@@ -8,7 +8,7 @@ in the AssetLib if you want to make something more complex. Also it shares code 
 and probably both should extend some parent script
 """
 
-export(int) var WALK_SPEED = 350 # pixels per second
+export(int) var WALK_SPEED = 550 # pixels per second
 export(int) var ROLL_SPEED = 1000 # pixels per second
 export(int) var hitpoints = 3
 
