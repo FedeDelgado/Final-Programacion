@@ -48,10 +48,10 @@ quest_name = "Life as a Delivery Guy"
 required_amount = 3
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
-position = Vector2( 1509.86, 2579.34 )
+position = Vector2( -1468.77, 1152.95 )
 
 [node name="house" parent="level" instance=ExtResource( 5 )]
-position = Vector2( 908.151, 406.509 )
+position = Vector2( 1165.17, 477.065 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
 [node name="house_outside" type="Position2D" parent="level/house" groups=[
@@ -184,6 +184,20 @@ item_type = "Magic Sword"
 position = Vector2( 2847.81, 2114.57 )
 item_type = "Coso"
 amount = 3
+
+[node name="mushroom_big2" parent="level" instance=ExtResource( 1 )]
+position = Vector2( 3069.89, 3047.64 )
+
+[node name="flower4" parent="level" instance=ExtResource( 7 )]
+position = Vector2( -289.969, 3188.64 )
+
+[node name="NPC" parent="level" instance=ExtResource( 13 )]
+position = Vector2( -1063.56, 1053.44 )
+
+[node name="Quest" parent="level/NPC" instance=ExtResource( 14 )]
+initial_text = "Hola, hoy es tu primer día, anda a repartir diarios"
+pending_text = "Dale flaco no tenemos todo el dia "
+delivered_text = "Bien nene, toma 10 centavos, comprate un naranju"
 
 [node name="music_track" parent="." instance=ExtResource( 6 )]
 music_track = "res://music/310-world-map-loop.ogg"
