@@ -57,7 +57,7 @@ func _physics_process(_delta):
 					Input.is_action_pressed("move_up")
 				):
 					state = STATE_WALKING
-			if Input.is_action_just_pressed("attack"):
+			if Input.is_action_just_pressed("attack") && Inventory.get_item("Diario Dorado")!=0:
 				state = STATE_ATTACK
 			if Input.is_action_just_pressed("roll"):
 				state = STATE_ROLL
@@ -69,7 +69,7 @@ func _physics_process(_delta):
 			new_anim = "idle_" + facing
 			pass
 		STATE_WALKING:
-			if Input.is_action_just_pressed("attack"):
+			if Input.is_action_just_pressed("attack") && Inventory.get_item("Diario Dorado")!=0:
 				state = STATE_ATTACK
 			if Input.is_action_just_pressed("roll"):
 				state = STATE_ROLL
