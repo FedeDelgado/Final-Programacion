@@ -51,7 +51,7 @@ required_amount = 3
 position = Vector2( -1468.77, 1152.95 )
 
 [node name="house" parent="level" instance=ExtResource( 5 )]
-position = Vector2( 908.151, 406.509 )
+position = Vector2( 1165.17, 477.065 )
 to_scene = "res://scenes/levels/HouseInside.tscn"
 
 [node name="house_outside" type="Position2D" parent="level/house" groups=[

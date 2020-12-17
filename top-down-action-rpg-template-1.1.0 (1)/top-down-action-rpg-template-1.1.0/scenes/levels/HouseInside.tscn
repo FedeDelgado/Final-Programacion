@@ -555,10 +555,6 @@ initial_text = "Que haces pibe? Te dije cuando dejaste la facultad que no volvie
 pending_text = "Fuera de mi casa. Estas haciendo llorar a tu madre."
 delivered_text = "Opa! Bien ahi pendejo. Podes volver a dormir bajo nuestro techo."
 
-[node name="Item" parent="house_inside" instance=ExtResource( 9 )]
-position = Vector2( 572.561, 327.86 )
-item_type = "Doctorado en Vender Diarios"
-
 [node name="YSort" type="YSort" parent="house_inside"]
 
 [node name="Character" parent="house_inside/YSort" instance=ExtResource( 5 )]
@@ -585,5 +581,9 @@ shape = SubResource( 17 )
 music_track = "res://music/a-2-3-groovy-bgm.ogg"
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
+
+[node name="Item" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1947.28, -247.716 )
+item_type = "Doctorado en Vender Diarios"
 
 [editable path="house_inside/Dadbug"]
