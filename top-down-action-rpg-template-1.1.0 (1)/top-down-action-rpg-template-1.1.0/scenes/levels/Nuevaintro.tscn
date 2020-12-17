@@ -52,11 +52,7 @@ anims/Esperar = SubResource( 2 )
 next/Esperar = "Coso"
 
 [node name="Creditos" type="Sprite" parent="AnimationPlayer"]
-<<<<<<< HEAD
-position = Vector2( 518, -386.471 )
-=======
-position = Vector2( 518, 800 )
->>>>>>> master
+position = Vector2( 518, 334.832 )
 scale = Vector2( 9.48862, 9.48862 )
 texture = ExtResource( 1 )
 
