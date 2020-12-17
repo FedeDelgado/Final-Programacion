@@ -6,6 +6,8 @@ class_name Exit
 Add this to any area2d and it will send the player to the indicated scene and spawnpoint
 """
 
+export(bool) var locked = false
+export(String) var req_item = ""
 export(String, FILE, "*.tscn") var to_scene = ""
 export(String) var spawnpoint = ""
 
@@ -16,7 +18,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_body_entered(body):
-	if body is Player:
+	if body is Player && (!locked || Inventory.get_item(req_item)!=0):
 		if  to_scene == "":
 			push_error("Error changing scenes: to_scene has no assigned scene")
 			return false

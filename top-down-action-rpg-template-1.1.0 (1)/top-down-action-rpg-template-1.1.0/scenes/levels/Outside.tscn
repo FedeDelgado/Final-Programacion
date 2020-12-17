@@ -599,8 +599,10 @@ position = Vector2( 3048.72, 1485.92 )
 [node name="enemy8" parent="level" instance=ExtResource( 4 )]
 position = Vector2( 1075.09, 2347.85 )
 
-[node name="house2" parent="level" instance=ExtResource( 5 )]
-position = Vector2( -1066.66, 3025.02 )
+[node name="Facultad" parent="level" instance=ExtResource( 5 )]
+position = Vector2( -1066.66, 3018.29 )
+locked = true
+req_item = "Diario Dorado"
 
 [node name="music_track" parent="." instance=ExtResource( 6 )]
 music_track = "res://music/310-world-map-loop.ogg"
