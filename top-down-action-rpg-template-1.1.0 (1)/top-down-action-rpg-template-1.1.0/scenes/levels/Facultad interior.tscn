@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://textures/Interior_facu.png" type="Texture" id=1]
+
+[node name="Facultad interior" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.62, 312.291 )
+scale = Vector2( 5.2374, 5.2374 )
+texture = ExtResource( 1 )
