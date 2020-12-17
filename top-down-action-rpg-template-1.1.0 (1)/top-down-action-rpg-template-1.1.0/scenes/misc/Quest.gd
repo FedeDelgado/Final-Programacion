@@ -18,9 +18,9 @@ export(int) var required_amount = 10
 export(String) var reward_item = "Generic Reward"
 export(int) var reward_amount = 1
 
-export(String, MULTILINE) var initial_text = "TLDR; bring me 10 thingies"
-export(String, MULTILINE) var pending_text = "You forgot? I want 10 thingies"
-export(String, MULTILINE) var delivered_text = "Thank you! Here's your reward.."
+export(String, MULTILINE) var initial_text = "Pibe, para ser diariero tenes que aprender a pelear"
+export(String, MULTILINE) var pending_text = "Anda nene y traeme 10 Generic Item"
+export(String, MULTILINE) var delivered_text = "Gracias papu, toma tu recompensa, sos crack"
 
 func process() -> String:
 	var quest_status = Quest.get_status(quest_name)

@@ -46,8 +46,6 @@ character_name = "Jorgito"
 [node name="Quest" parent="level/Jorgito" instance=ExtResource( 14 )]
 quest_name = "Life as a Delivery Guy"
 required_amount = 3
-initial_text = "TLDR; bring me 3 Generic Items"
-pending_text = "You forgot? I want 3 Generic Items"
 
 [node name="Character" parent="level" instance=ExtResource( 8 )]
 position = Vector2( 1509.86, 2579.34 )
