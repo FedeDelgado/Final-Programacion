@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/props/MushroomBig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/misc/UI.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scenes/characters/Npc.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/misc/Quest.tscn" type="PackedScene" id=14]
 [ext_resource path="res://textures/OutsideTileset.png" type="Texture" id=15]
+[ext_resource path="res://scenes/misc/Quest.gd" type="Script" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 4, 16, 24, 6, 26, 6, 32, 4, 32, 4, 6 )
@@ -414,7 +415,7 @@ scale = Vector2( 1.97507, 1.97507 )
 texture = ExtResource( 10 )
 
 [node name="level" type="YSort" parent="."]
-position = Vector2( 208.024, -128.355 )
+position = Vector2( 209.706, -128.355 )
 
 [node name="Jorgito" parent="level" instance=ExtResource( 13 )]
 position = Vector2( 2138.84, 2199.04 )
@@ -424,8 +425,73 @@ character_name = "Jorgito"
 quest_name = "Life as a Delivery Guy"
 required_amount = 3
 
+[node name="Diarios" parent="level" instance=ExtResource( 12 )]
+position = Vector2( -1238.99, -1438.56 )
+item_type = "Diarios pa entregar"
+amount = 3
+
 [node name="Character" parent="level" instance=ExtResource( 8 )]
-position = Vector2( -1103.14, 751.725 )
+position = Vector2( -1720.44, -1022.27 )
+
+[node name="Compra Diario 1" parent="level" instance=ExtResource( 13 )]
+position = Vector2( -781.928, -1237.13 )
+character_name = "barrabrava de la 12"
+dialogs = [ "No te metas con la barra." ]
+
+[node name="Quest" type="Node" parent="level/Compra Diario 1"]
+script = ExtResource( 16 )
+quest_name = "Ole Ole"
+required_item = "Diarios pa entregar"
+required_amount = 1
+initial_text = "Desde la mañana estoy esperando que me llegue la revista Ole. La tenes?	"
+pending_text = "Que haces aca sin la revista flaco? "
+delivered_text = "fua
+el diego..."
+
+[node name="Compra Diario 2" parent="level" instance=ExtResource( 13 )]
+position = Vector2( -987.273, -1185.45 )
+
+[node name="Quest" type="Node" parent="level/Compra Diario 2"]
+script = ExtResource( 16 )
+required_item = "Diarios pa entregar"
+required_amount = 1
+
+[node name="Compra Diario 3" parent="level" instance=ExtResource( 13 )]
+position = Vector2( -528.322, -1230.49 )
+character_name = "otaku"
+
+[node name="Quest" type="Node" parent="level/Compra Diario 3"]
+script = ExtResource( 16 )
+quest_name = "subete al eva"
+required_item = "Diarios pa entregar"
+required_amount = 1
+initial_text = "ya llego el nuevo tomo de demon slayer?"
+pending_text = "Escuche en internet que tanjiro se transforma en demonio y si es asi medio cualquiera pero confio en gotouge igual desde el arco del ataque a la aldea esta todo medio denso. Para mi ese arco estaba de mas, aparte ahora estan alargando mucho la pelea final y hace meses estoy comprando tomos y parece que no quisieran terminarlo.
+Parece ridiculo
+Pero tambien soy muy fan del manga, me lo lei todo en una semana sabias? Viste que la autora de HxH felicito a Gotouge a mi me parecio una re sorpresa me gusta mucho HxH."
+delivered_text = "Viste Devilman Crybaby? Desde que me entere que lo iba a dirigir Masaaki Yuasa sabia que iba a ser un re anime.
+Hay gente que dice que no es anime por el estilo pero simplemente no conocen a Yuasa. Tipo, Summer Wars y The Night is Short, Walk on Girl tambien tienen estilos raros pero no dejan de ser anime y son peliculas buenisimas. Pero en fin, me encanta Devilman. Viste cuando se transforma en demonio por primera vez? Dios era tan emocionante. Me hizo llorar tanto cuando murio Miki. Pero bueno, realmente la historia es sobre como Ryo descubre que es el diablo y aprende a amar despues de matar a Akira. Me parece re triste tipo, al principio del anime esta Akira llorando por un gato muerto y Ryo se burla pero Akira le responde que el tambien puede llorar y Ryo no entiende; y al final Ryo se pone a llorar cuando se da cuenta de que murio Akira. Es una paralela hermosa, creo que cada vez que veo el anime de nuevo aprendo algo nuevo.
+
+
+
+
+
+Aparte le re doy a la mina demonio esa."
+
+[node name="Amigo Diariero" parent="level" instance=ExtResource( 13 )]
+position = Vector2( -1398.67, -1402.55 )
+character_name = "Jefe del kiosco"
+dialogs = [ "Es un diario dorado. Podes usarlo para entrar en la facultad de repartir diarios o incluso para atacar fisuras!" ]
+
+[node name="Quest" type="Node" parent="level/Amigo Diariero"]
+script = ExtResource( 16 )
+quest_name = "Repartir Diarios"
+required_item = "monedita"
+required_amount = 3
+reward_item = "Diario Dorado"
+initial_text = "Amigo tenias que salir a repartir diarios al mediodia y son las tres de la tarde, apurate"
+pending_text = "Agarra los diarios ahi tirados al lado mio en una bolsa sospechosa y llevalos con los clientes"
+delivered_text = "Ya era hora, pero al menos hiciste un trabajo limpio. Te ganaste esto"
 
 [node name="house" parent="level" instance=ExtResource( 5 )]
 position = Vector2( 1165.17, 477.065 )
@@ -497,7 +563,7 @@ position = Vector2( -234.997, 3649.3 )
 position = Vector2( -369.359, -286.035 )
 
 [node name="grass15" parent="level" instance=ExtResource( 3 )]
-position = Vector2( -921.388, -934.964 )
+position = Vector2( -149.134, -982.107 )
 
 [node name="grass16" parent="level" instance=ExtResource( 3 )]
 position = Vector2( -1711.26, -1401.84 )
@@ -525,42 +591,6 @@ position = Vector2( 3048.72, 1485.92 )
 
 [node name="enemy8" parent="level" instance=ExtResource( 4 )]
 position = Vector2( 1075.09, 2347.85 )
-
-[node name="Item" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 1032.97, 1956.3 )
-
-[node name="Item2" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 1234.96, 1710.6 )
-item_type = "Magic Sword"
-
-[node name="Item3" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 969.666, 1659.36 )
-item_type = "Coso"
-amount = 3
-
-[node name="Item6" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2636.78, 2137.18 )
-
-[node name="Item5" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2838.76, 1891.49 )
-item_type = "Magic Sword"
-
-[node name="Item4" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2573.47, 1840.24 )
-item_type = "Coso"
-amount = 3
-
-[node name="Item9" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2911.12, 2411.52 )
-
-[node name="Item8" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 3113.1, 2165.82 )
-item_type = "Magic Sword"
-
-[node name="Item7" parent="level" instance=ExtResource( 12 )]
-position = Vector2( 2847.81, 2114.57 )
-item_type = "Coso"
-amount = 3
 
 [node name="house2" parent="level" instance=ExtResource( 5 )]
 position = Vector2( -1066.66, 3025.02 )
