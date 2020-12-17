@@ -603,6 +603,7 @@ position = Vector2( 1075.09, 2347.85 )
 position = Vector2( -1066.66, 3018.29 )
 locked = true
 req_item = "Diario Dorado"
+to_scene = "res://scenes/levels/Facultad interior.tscn"
 
 [node name="music_track" parent="." instance=ExtResource( 6 )]
 music_track = "res://music/310-world-map-loop.ogg"
