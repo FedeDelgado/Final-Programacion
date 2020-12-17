@@ -558,7 +558,7 @@ delivered_text = "Opa! Bien ahi pendejo. Podes volver a dormir bajo nuestro tech
 [node name="YSort" type="YSort" parent="house_inside"]
 
 [node name="Character" parent="house_inside/YSort" instance=ExtResource( 5 )]
-position = Vector2( -2.20683, 736.559 )
+position = Vector2( -66.3903, 593.09 )
 facing = "up"
 
 [node name="Table" parent="house_inside/YSort" instance=ExtResource( 10 )]
